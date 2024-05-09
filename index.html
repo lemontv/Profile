@@ -80,6 +80,38 @@
       p {
         margin: 16px 0;
       }
+
+      .wave-hand {
+        display: inline-block;
+        font-size: 48px; /* Adjust the size of the emoji */
+        animation: wave 5s infinite; /* Total duration includes 3 waves + 5s pause */
+        transform-origin: 70% 70%; /* Pivot around the wrist of the hand */
+      }
+
+      @keyframes wave {
+        0%,
+        40% {
+          transform: rotate(0deg);
+        }
+        5%,
+        10%,
+        15%,
+        20%,
+        25% {
+          transform: rotate(-15deg);
+        }
+        7.5%,
+        12.5%,
+        17.5%,
+        22.5%,
+        27.5% {
+          transform: rotate(15deg);
+        }
+        40%,
+        100% {
+          transform: rotate(0deg);
+        }
+      }
     </style>
     <!-- Google tag (gtag.js) -->
     <script
@@ -130,7 +162,7 @@
       </nav>
     </header>
     <main>
-      <h1>👋 Hey !</h1>
+      <h1>Hey! <span class="wave-hand">👋</span></h1>
       <section>
         <p>
           My name is Shiming Chen and I am a senior developer based in Canada.
